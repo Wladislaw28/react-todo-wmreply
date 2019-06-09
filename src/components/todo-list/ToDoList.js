@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import ToDoItem from '../todo-item/ToDoItem';
 import './ToDoList.css';
 
-const ToDoList = ({tasksList, deleteTask, completeTask, expansionTask}) => (
+const ToDoList = ({tasksList, deleteTask, completeTask}) => (
 	<ul className="todo-list">
-		{tasksList.map(({ id, text, isCompleted, isExpansion }) => (
-			<ToDoItem expansionTask={expansionTask} completeTask={completeTask} deleteTask={deleteTask} id={id} key={id} text={text} isCompleted={isCompleted} isExpansion={isExpansion} />
+		{tasksList.map(({ id, text, data, description, responsible, isCompleted }) => (
+			<ToDoItem completeTask={completeTask} deleteTask={deleteTask} id={id} key={id} text={text} data={data}
+					  description={description}	 responsible={responsible}  isCompleted={isCompleted}/>
 		))}
 	</ul>
 );
@@ -15,16 +16,15 @@ const ToDoList = ({tasksList, deleteTask, completeTask, expansionTask}) => (
 ToDoList.propTypes = {
 	tasksList: PropTypes.array,
 	deleteTask: PropTypes.func,
-	completeTask: PropTypes.func,
-	expansionTask: PropTypes.func
-}
+	completeTask: PropTypes.func
+};
 
 ToDoList.defaultProps = {
 	tasksList: [],
 	deleteTask: () => {},
-	completeTask: () => {},
-	expansionTask: () => {}
-}
+	completeTask: () => {}
+};
+
 
 export default ToDoList;
 

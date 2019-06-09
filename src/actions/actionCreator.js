@@ -1,12 +1,14 @@
-import {ADD_TASK, DELETE_TASK, COMPLETE_TASK, EXPANSION_TASK, CHANGE_FILTER} from "../constants";
+import {ADD_TASK, DELETE_TASK, COMPLETE_TASK, CHANGE_FILTER} from "../constants";
 
 
-export const addTask = (id, text, isCompleted, isExpansion) => ({
+export const addTask = (id, text, data, description, responsible, isCompleted) => ({
 	type: ADD_TASK,
 	id,
 	text,
+	data,
+	description,
+	responsible,
 	isCompleted,
-	isExpansion
 });
 
 export const deleteTask = id => ({
@@ -16,11 +18,6 @@ export const deleteTask = id => ({
 
 export const completeTask = id => ({
 	type: COMPLETE_TASK,
-	id
-});
-
-export const expansionTask = id => ({
-	type: EXPANSION_TASK,
 	id
 });
 

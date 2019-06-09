@@ -18,3 +18,21 @@ export const FILTERS_BTN = [
 		id: 'completed'
 	}
 ];
+
+export const USERS = [
+	{
+		id: '1',
+		value: 'Vladislav',
+		title: 'Vladislav'
+	},
+	{
+		id: '2',
+		value: 'Platon',
+		title: 'Platon'
+	},
+	{
+		id: '3',
+		value: 'Ivan',
+		title: 'Ivan'
+	}
+];

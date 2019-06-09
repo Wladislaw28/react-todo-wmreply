@@ -5,7 +5,7 @@ import ToDoInput from '../components/todo-input/ToDoInput'; //текст зад�
 import Footer from '../components/footer/Footer';
 import ToDoList from '../components/todo-list/ToDoList';//список задач
 
-import {addTask, deleteTask} from "../actions/actionCreator";
+import {addTask, deleteTask, completeTask} from "../actions/actionCreator";
 import './Todo.css';
 
 
@@ -14,13 +14,13 @@ class ToDo extends Component {
 	state = {
 		activeFilter: 'all',
 		taskText: ''
-	}
+	};
 
 	handleInputChange = ({ target: { value } }) => {
 		this.setState({
 			taskText: value,
 		})
-	}
+	};
 
 	addTask = ({ key }) => {
 		const { taskText } = this.state;
@@ -33,20 +33,18 @@ class ToDo extends Component {
 			this.setState({
 				taskText: '',
 			})
-
 		}
-
-	}
+	};
 
 	render() {
 		const { activeFilter, taskText } = this.state;
-		const { tasks } = this.props;
+		const { tasks, deleteTask, completeTask } = this.props;
 		const isTasksExist = tasks && tasks.length > 0;
 
 		return (
 			<div className="todo-wrapper">
 				<ToDoInput onKeyPress={this.addTask} onChange={this.handleInputChange} value={taskText} />
-				{isTasksExist && <ToDoList tasksList={tasks} />}
+				{isTasksExist && <ToDoList completeTask={completeTask} tasksList={tasks} deleteTask={deleteTask} />}
 				{isTasksExist && <Footer amount={tasks.length} activeFilter={activeFilter} />}
 			</div>
 		);
@@ -55,4 +53,4 @@ class ToDo extends Component {
 
 export default connect(state => ({
 	tasks: state.tasks,
-}), { addTask }, {deleteTask})(ToDo);
+}), { addTask, deleteTask, completeTask})(ToDo);

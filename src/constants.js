@@ -4,23 +4,17 @@ export const COMPLETE_TASK = 'COMPLETE_TASK';
 export const EXPANSION_TASK = 'EXPANSION_TASK';
 export const CHANGE_FILTER = 'CHANGE_FILTER';
 
-export const TASKS = [
+export const FILTERS_BTN = [
 	{
-		id: 1,
-		text: 'Learn ReactJS',
-		isCompleted: true,
-		isExpansion: true
+		text: 'All',
+		id: 'all'
 	},
 	{
-		id: 2,
-		text: 'Learn Redux',
-		isCompleted: false,
-		isExpansion: false
+		text: 'Active',
+		id: 'active'
 	},
 	{
-		id: 3,
-		text: 'Learn React Router',
-		isCompleted: false,
-		isExpansion: false
+		text: 'Completed',
+		id: 'completed'
 	}
 ];

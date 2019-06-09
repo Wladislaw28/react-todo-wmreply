@@ -7,8 +7,6 @@ import ToDoList from '../components/todo-list/ToDoList';//список зада�
 
 import {addTask, deleteTask, completeTask, expansionTask, changeFilter} from "../actions/actionCreator";
 import './Todo.css';
-import tasks from "../reducers/tasks";
-
 
 class ToDo extends Component {
 
@@ -50,7 +48,7 @@ class ToDo extends Component {
 	};
 
 	render() {
-		const { activeFilter, taskText } = this.state;
+		const { taskText } = this.state;
 		const { tasks, deleteTask, completeTask, expansionTask, filters, changeFilter } = this.props;
 		const isTasksExist = tasks && tasks.length > 0;
 		const filteredTasks = this.filterTasks(tasks, filters);

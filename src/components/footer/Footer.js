@@ -1,22 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {FILTERS_BTN} from '../../constants';
 
 import './Footer.css';
-
-const FILTERS_BTN = [
-	{
-		text: 'All',
-		id: 'all'
-	},
-	{
-		text: 'Active',
-		id: 'active'
-	},
-	{
-		text: 'Completed',
-		id: 'completed'
-	}
-];
 
 const Footer = ({amount, activeFilter, changeFilter}) => (
 	<div className="footer">
@@ -32,8 +18,8 @@ const Footer = ({amount, activeFilter, changeFilter}) => (
 );
 
 Footer.propTypes  = {
-	amount: PropTypes.number, //кол-во задач
-	activeFilter: PropTypes.string, //активн фильтр
+	amount: PropTypes.number,
+	activeFilter: PropTypes.string,
 	changeFilter: PropTypes.func
 };
 

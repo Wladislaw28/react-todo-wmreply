@@ -1,47 +1,58 @@
-import React , {Component} from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import ToDoInput from '../components/todo-input/ToDoInput'; //текст задачи
 import Footer from '../components/footer/Footer';
 import ToDoList from '../components/todo-list/ToDoList';//список задач
 
+import {addTask, deleteTask} from "../actions/actionCreator";
 import './Todo.css';
 
-const TASKS = [
-	{
-		id: 1,
-		text: 'Learn ReactJS',
-		isCompleted: true,
-	},
-	{
-		id: 2,
-		text: 'Learn Redux',
-		isCompleted: false,
-	},
-	{
-		id: 3,
-		text: 'Learn React Router',
-		isCompleted: false,
-	}
-];
 
-class ToDo extends React.Component{
+class ToDo extends Component {
+
 	state = {
-		activeFilter: 'all' //какие задачи должны показывать
-	};
+		activeFilter: 'all',
+		taskText: ''
+	}
+
+	handleInputChange = ({ target: { value } }) => {
+		this.setState({
+			taskText: value,
+		})
+	}
+
+	addTask = ({ key }) => {
+		const { taskText } = this.state;
+
+		if (taskText.length > 3 && key === 'Enter') {
+			const { addTask } = this.props;
+
+			addTask((new Date()).getTime(), taskText, false);
+
+			this.setState({
+				taskText: '',
+			})
+
+		}
+
+	}
 
 	render() {
+		const { activeFilter, taskText } = this.state;
+		const { tasks } = this.props;
+		const isTasksExist = tasks && tasks.length > 0;
 
-		const {activeFilter} = this.state;
-		const tasksList = TASKS;
-		const isTasksExist = tasksList && tasksList.length > 0;
-
-		return(
+		return (
 			<div className="todo-wrapper">
-				<ToDoInput />
-				{isTasksExist && <ToDoList tasksList={tasksList} />}
-				{isTasksExist && <Footer amount={tasksList.length} activeFilter={activeFilter} />}
+				<ToDoInput onKeyPress={this.addTask} onChange={this.handleInputChange} value={taskText} />
+				{isTasksExist && <ToDoList tasksList={tasks} />}
+				{isTasksExist && <Footer amount={tasks.length} activeFilter={activeFilter} />}
 			</div>
 		);
 	}
 }
 
-export default ToDo;
+export default connect(state => ({
+	tasks: state.tasks,
+}), { addTask }, {deleteTask})(ToDo);

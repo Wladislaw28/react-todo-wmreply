@@ -5,15 +5,18 @@ import './ToDoInput.css';
 
 const ToDoInput = ({ value, onChange, onKeyPress, type }) => (
 	<div className="todo-input-wrapper">
-		<i className="fas fa-plus" />
-		<input
-			type={type}
-			className="todo-input"
-			placeholder="Click to add task"
-			onChange={onChange}
-			value={value}
-			onKeyPress={onKeyPress}
-		/>
+		<span className="input input--isao">
+			<input
+				type={type}
+				className="input__field input__field--isao"
+				onChange={onChange}
+				value={value}
+				onKeyPress={onKeyPress}
+			/>
+			<label className="input__label input__label--isao">
+				<span className="input__label-content input__label-content--isao">Enter text to task</span>
+			</label>
+		</span>
 	</div>
 );
 
@@ -21,14 +24,14 @@ ToDoInput.propTypes = {
 	onChange: PropTypes.func,
 	onKeyPress: PropTypes.func,
 	value: PropTypes.string,
-	type: PropTypes.string
+	type: PropTypes.string,
 };
 
 ToDoInput.defaultProps = {
 	onChange: () => {},
 	onKeyPress: () => {},
 	value: '',
-	type: ''
+	type: '',
 };
 
 export default ToDoInput;

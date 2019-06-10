@@ -11,7 +11,9 @@ const ToDoItem = ({text, data, description, responsible, isCompleted, deleteTask
 			<span className={isCompleted ? 'completed text' : 'text'}>{text}</span>
 			<span className={isCompleted ? 'completed text' : 'text'}>{responsible}</span>
 			<span className={isCompleted ? 'completed text' : 'text'}>{data}</span>
-			<p className={isCompleted ? 'completed text' : 'text'}>{description}</p>
+			<div className="description">
+				<p className={isCompleted ? 'completed text' : 'text_descr'}>{description}</p>
+			</div>
 			<i onClick={ () => deleteTask(id) } className="fas fa-times" />
 		</li>
 	</div>

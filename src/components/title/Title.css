@@ -8,7 +8,7 @@
 /*}*/
 
 .link {
-	margin-left: 400px;
+	margin-left: 300px;
 	margin-top: 100px;
 	outline: none;
 	text-decoration: none;
@@ -26,7 +26,7 @@
 	font-weight: 900;
 	overflow: hidden;
 	line-height: 0.75;
-	color: black;
+	color: white;
 }
 
 .link--kukuri:hover {

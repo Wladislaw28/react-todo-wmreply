@@ -4,7 +4,7 @@ import Title from './components/title/Title';
 
 const App = () => (
 	<Fragment>
-		<Title title="ToDo App" />
+		<Title title="ToDo Application" />
 		<ToDo />
 	</Fragment>
 );

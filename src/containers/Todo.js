@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import ToDoInput from '../components/todo-input/input/ToDoInput';
 import ToDoSelect from '../components/todo-input/select/ToDoSelect';
 import ToDoTextArea from '../components/todo-input/textarea/ToDoTextArea';
+import Button from '../components/todo-input/button/Button';
 import Footer from '../components/footer/Footer';
 import ToDoList from '../components/todo-list/ToDoList';
 
@@ -47,7 +48,7 @@ class ToDo extends Component {
 		e.preventDefault();
 		const { taskText, textAreaText, taskData, selectText } = this.state;
 
-		if (taskText.length > 3) {
+		if (taskText.length > 3 && textAreaText.length < 45) {
 			const { addTask } = this.props;
 
 			addTask((new Date()).getTime(), taskText, taskData, textAreaText, selectText, false);
@@ -83,14 +84,15 @@ class ToDo extends Component {
 
 		return (
 			<div className="todo-wrapper">
-				<ToDoInput onChange={this.handleInputChange} value={taskText} type="text" />
-				<ToDoInput onChange={this.handleInputDataChange} value={taskData} type="date" />
-				<ToDoTextArea value={textAreaText} onChange={this.handleTextAreaChange} />
-				<ToDoSelect value={selectText} onChange={this.handleSelectChange} />
-				<button onClick={this.addTask}>Add</button>
-
-				{isTasksExist && <ToDoList completeTask={completeTask} tasksList={filteredTasks} deleteTask={deleteTask} />}
+				<div className="todo-form">
+					<ToDoInput onChange={this.handleInputChange} value={taskText} type="text" />
+					<ToDoInput onChange={this.handleInputDataChange} value={taskData} type="date" />
+					<ToDoTextArea value={textAreaText} onChange={this.handleTextAreaChange} />
+					<ToDoSelect value={selectText} onChange={this.handleSelectChange} />
+					<Button onClick={this.addTask}>Add task</Button>
+				</div>
 				{isTasksExist && <Footer changeFilter={changeFilter} amount={taskCounter} activeFilter={filters} />}
+				{isTasksExist && <ToDoList completeTask={completeTask} tasksList={filteredTasks} deleteTask={deleteTask} />}
 			</div>
 		);
 	}

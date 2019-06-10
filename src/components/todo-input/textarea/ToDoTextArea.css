@@ -1,6 +1,6 @@
 .todo-textarea-wrapper{
 	position: relative;
-	border-bottom: 1px solid #ededed;
+
 }
 
 .todo-textarea{
@@ -9,6 +9,9 @@
 	resize: none;
 	overflow: auto;
 	-moz-appearance: none;
-	border: 1px solid #999; /* указание этого свойства также удалит обводку в FireFox */
-
+	border: 2px solid #c5564a; /* указание этого свойства также удалит обводку в FireFox */
+	margin-bottom: 10px;
+	color: black;
+	font-family: 'Franklin Gothic Medium', sans-serif;
+	font-size: 15px;
 }

@@ -1,4 +1,4 @@
-import {ADD_TASK, DELETE_TASK, COMPLETE_TASK, CHANGE_FILTER} from "../constants";
+import {ADD_TASK, DELETE_TASK, COMPLETE_TASK, CHANGE_FILTER} from '../constants';
 
 
 

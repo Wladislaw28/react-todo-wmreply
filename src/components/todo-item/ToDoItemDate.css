@@ -1,5 +1,5 @@
-.todo-item {
-	font-size: 24px;
+.todo-item-date {
+	font-size: 20px;
 	border: 2px solid #c5564a;
 	min-height: 160px;
 	display: flex;
@@ -13,8 +13,6 @@
 	position: relative;
 	background-color: white;
 }
-
-
 
 .text {
 	font-family: 'Arial', sans-serif;

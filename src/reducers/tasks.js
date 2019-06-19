@@ -9,7 +9,7 @@ if (!TASKS || !TASKS.tasks || !TASKS.tasks.length) {
 	}
 }
 
-const tasks = (state = TASKS.tasks, { id, text, data, description, responsible, isCompleted, type }) => {
+const tasks = (state = TASKS.tasks, { id, text, data, isCompleted, type }) => {
 	switch (type) {
 		case ADD_TASK :
 			return [
@@ -17,8 +17,6 @@ const tasks = (state = TASKS.tasks, { id, text, data, description, responsible, 
 					id,
 					text,
 					data,
-					description,
-					responsible,
 					isCompleted,
 				}
 			];

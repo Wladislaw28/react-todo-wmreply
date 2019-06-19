@@ -1,0 +1,17 @@
+.button-date {
+	float: left;
+	min-width: 100px;
+	max-width: 240px;
+	display: block;
+	cursor: pointer;
+	border: 2px solid black;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+

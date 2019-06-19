@@ -1,29 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import './ToDoItem.css';
 
-const ToDoItem = ({text, data, description, responsible, isCompleted, deleteTask, completeTask, id }) => (
+class ToDoItem extends React.Component{
 
-	<div className="todo-item-div">
-		<li  className='todo-item'>
-			<i onClick={ () => completeTask(id) } className={isCompleted ? 'mark far fa-check-circle' : 'mark far fa-circle'} />
-			<span className={isCompleted ? 'completed text' : 'text'}>{text}</span>
-			<span className={isCompleted ? 'completed text' : 'text'}>{responsible}</span>
-			<span className={isCompleted ? 'completed text' : 'text'}>{data}</span>
-			<div className="description">
-				<p className={isCompleted ? 'completed text' : 'text_descr'}>{description}</p>
+
+	render(){
+		const {completeTask, isCompleted, deleteTask, id, text} = this.props;
+		return(
+			<div className="todo-item-div">
+				 		<li  className='todo-item'>
+				 			<i onClick={ () => completeTask(id) }
+							   className={isCompleted ? 'mark far fa-check-circle' : 'mark far fa-circle'} />
+				 			<span className={isCompleted ? 'completed text' : 'text'}>{text}</span>
+				 			<i onClick={ () => deleteTask(id) } className="fas fa-plus" />
+				 			<i onClick={ () => deleteTask(id) } className="fas fa-times" />
+				 		</li>
 			</div>
-			<i onClick={ () => deleteTask(id) } className="fas fa-times" />
-		</li>
-	</div>
-);
+		)
+	}
+}
 
 ToDoItem.propTypes = {
 	text: PropTypes.string,
-	data: PropTypes.string,
-	description: PropTypes.string,
-	responsible: PropTypes.string,
 	isCompleted: PropTypes.bool,
 	deleteTask: PropTypes.func,
 	completeTask: PropTypes.func,
@@ -32,9 +32,6 @@ ToDoItem.propTypes = {
 
 ToDoItem.defaultProps = {
 	text: '',
-	data: '1999-08-30',
-	description: '',
-	responsible: '',
 	isCompleted: false,
 	deleteTask: () => {},
 	completeTask: () => {},

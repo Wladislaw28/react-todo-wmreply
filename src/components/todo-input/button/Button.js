@@ -4,9 +4,7 @@ import classNames from 'classnames';
 
 import './Button.css';
 
-const Button = ({
-					children, onClick, className, disabled, active, ...attrs
-				}) => {
+const Button = ({ children, onClick, className, disabled, active, ...attrs}) => {
 	const onClickAction = e => {
 		if (disabled) {
 			e.preventDefault();

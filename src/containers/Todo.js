@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import ToDoInput from '../components/todo-input/input/ToDoInput';
-import ToDoSelect from '../components/todo-input/select/ToDoSelect';
-import ToDoTextArea from '../components/todo-input/textarea/ToDoTextArea';
 import Button from '../components/todo-input/button/Button';
 import Footer from '../components/footer/Footer';
 import ToDoList from '../components/todo-list/ToDoList';
@@ -15,9 +13,7 @@ class ToDo extends Component {
 
 	state = {
 		taskText: '',
-		textAreaText: '',
-		taskData: '',
-		selectText: ''
+		taskData: ''
 	};
 
 	handleInputChange = ({ target: { value } }) => {
@@ -32,32 +28,18 @@ class ToDo extends Component {
 		})
 	};
 
-	handleSelectChange = ({ target: { value } }) => {
-		this.setState({
-			selectText: value,
-		})
-	};
-
-	handleTextAreaChange = ({ target: { value } }) => {
-		this.setState({
-			textAreaText: value,
-		})
-	};
-
 	addTask = (e) => {
 		e.preventDefault();
-		const { taskText, textAreaText, taskData, selectText } = this.state;
+		const { taskText, taskData } = this.state;
 
-		if (taskText.length > 3 && textAreaText.length < 45) {
+		if (taskText.length > 3) {
 			const { addTask } = this.props;
 
-			addTask((new Date()).getTime(), taskText, taskData, textAreaText, selectText, false);
+			addTask((new Date()).getTime(), taskText, taskData, false);
 
 			this.setState({
 				taskText: '',
-				taskData: '',
-				textAreaText: '',
-				selectText: ''
+				taskData: ''
 			})
 		}
 	};
@@ -76,7 +58,7 @@ class ToDo extends Component {
 	};
 
 	render() {
-		const { taskText, textAreaText, taskData, selectText } = this.state;
+		const { taskText, taskData } = this.state;
 		const { tasks, deleteTask, completeTask, filters, changeFilter } = this.props;
 		const isTasksExist = tasks && tasks.length > 0;
 		const filteredTasks = this.filterTasks(tasks, filters);
@@ -87,9 +69,10 @@ class ToDo extends Component {
 				<div className="todo-form">
 					<ToDoInput onChange={this.handleInputChange} value={taskText} type="text" />
 					<ToDoInput onChange={this.handleInputDataChange} value={taskData} type="date" />
-					<ToDoTextArea value={textAreaText} onChange={this.handleTextAreaChange} />
-					<ToDoSelect value={selectText} onChange={this.handleSelectChange} />
 					<Button onClick={this.addTask}>Add task</Button>
+					<Button>Clear Complete Task</Button>
+
+					{console.log(tasks.length)}
 				</div>
 				{isTasksExist && <Footer changeFilter={changeFilter} amount={taskCounter} activeFilter={filters} />}
 				{isTasksExist && <ToDoList completeTask={completeTask} tasksList={filteredTasks} deleteTask={deleteTask} />}

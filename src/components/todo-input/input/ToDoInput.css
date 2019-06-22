@@ -28,13 +28,14 @@
 	position: relative;
 	display: block;
 	float: right;
-	padding: 0.8em;
-	width: 60%;
+	padding: 0.5em;
+	width: 50%;
+
 	border: none;
 	border-radius: 0;
 	background: #f0f0f0;
 	font-size: 20px;
-	color: white;
+	color: black;
 	font-weight: bold;
 	font-family: "Franklin Gothic Medium", sans-serif;
 	-webkit-appearance: none; /* for box shadows to show on iOS */

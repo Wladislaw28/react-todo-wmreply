@@ -1,7 +1,7 @@
 .todo-item-sub {
 	font-size: 24px;
 	border: 2px solid #c5564a;
-	min-height: 460px;
+	max-height: 360px;
 	display: flex;
 	align-items: center;
 	list-style: none;
@@ -9,11 +9,9 @@
 	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	position: relative;
 	background-color: white;
 }
-
 
 
 .text {

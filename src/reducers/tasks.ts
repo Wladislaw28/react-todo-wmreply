@@ -55,6 +55,6 @@ const tasks = (state = TASKS.tasks, { id, text, data, isCompleted, valueSearch, 
 		default:
 			return state;
 	}
-}
+};
 
 export default tasks;

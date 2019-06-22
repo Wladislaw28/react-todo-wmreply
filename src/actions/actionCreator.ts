@@ -1,5 +1,7 @@
-import {ADD_TASK, DELETE_TASK, COMPLETE_TASK, CHANGE_FILTER,
-    ADD_TASK_WITH_DATA, SEARCH_TASK, ADD_TASK_SUB} from '../constants';
+import {
+    ADD_TASK, DELETE_TASK, COMPLETE_TASK, CHANGE_FILTER,
+    ADD_TASK_WITH_DATA, SEARCH_TASK, ADD_TASK_SUB, ADD_TASK_IN_SUBTASK, DELETE_SUBTASK, COMPLETE_SUBTASK
+} from '../constants';
 
 
 
@@ -24,6 +26,23 @@ export const addTaskSub = (id, text, isCompleted, isExpansion) => ({
     text,
     isCompleted,
     isExpansion
+});
+
+export const addTaskInSubTask = (id, text, isCompleted) => ({
+    type: ADD_TASK_IN_SUBTASK,
+    id,
+    text,
+    isCompleted
+});
+
+export const deleteSubTask = id => ({
+    type: DELETE_SUBTASK,
+    id
+});
+
+export const completeSubTask = id => ({
+    type: COMPLETE_SUBTASK,
+    id
 });
 
 export const searchTask = (valueSearch) => ({

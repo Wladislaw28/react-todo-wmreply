@@ -2,33 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8426cbe-14ca-4059-960c-86d6a2de8486" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/search/SearchBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/search/SearchBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todo-input/input/Input.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todo-input/input/Input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todo-item/sub/ToDoListSub.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todo-item/sub/ToDoListSub.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/tasksub.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/actionCreator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionCreator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo-input/button/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-input/button/Button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-item/ToDoItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/ToDoItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-item/ToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/ToDoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-item/ToDoItemDate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/timer/ToDoItemDate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-item/ToDoItemDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/timer/ToDoItemDate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-item/timer-components/Button_Date.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/timer/timer-components/Button_Date.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-item/timer-components/Button_Date.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/timer/timer-components/Button_Date.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-item/timer-components/TimerDisplay.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/timer/timer-components/TimerDisplay.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-item/timer-components/TimerDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/timer/timer-components/TimerDisplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo-item/sub/ToDoListSub.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/sub/ToDoListSub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo-list/ToDoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-list/ToDoList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Todo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Todo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/tasks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/tasks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,24 +36,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="73" />
+          <entry key="css" value="77" />
           <entry key="html" value="1" />
-          <entry key="js" value="141" />
+          <entry key="js" value="145" />
           <entry key="json" value="12" />
           <entry key="rnc" value="1" />
-          <entry key="ts" value="10" />
-          <entry key="tsx" value="2" />
+          <entry key="ts" value="18" />
+          <entry key="tsx" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="73" />
+          <entry key="CSS" value="77" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="8" />
-          <entry key="JavaScript" value="141" />
+          <entry key="JavaScript" value="145" />
           <entry key="RNG Compact" value="1" />
-          <entry key="TypeScript" value="10" />
-          <entry key="TypeScript JSX" value="2" />
+          <entry key="TypeScript" value="18" />
+          <entry key="TypeScript JSX" value="3" />
           <entry key="tsconfig" value="4" />
         </counts>
       </usages-collector>
@@ -80,21 +65,21 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="809" />
+          <entry key="css" value="913" />
           <entry key="dummy" value="10" />
-          <entry key="js" value="11483" />
+          <entry key="js" value="11753" />
           <entry key="json" value="30" />
-          <entry key="ts" value="351" />
+          <entry key="ts" value="600" />
           <entry key="tsx" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="809" />
+          <entry key="CSS" value="913" />
           <entry key="JSON" value="16" />
-          <entry key="JavaScript" value="11483" />
+          <entry key="JavaScript" value="11753" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="TypeScript" value="351" />
+          <entry key="TypeScript" value="600" />
           <entry key="TypeScript JSX" value="16" />
           <entry key="tsconfig" value="14" />
         </counts>
@@ -103,11 +88,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Todo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="-69">
+              <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -118,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+            <state relative-caret-position="203">
+              <caret line="68" column="71" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -127,20 +112,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/todo-item/sub/ToDoListSub.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="23">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.js">
+        <entry file="file://$PROJECT_DIR$/src/components/todo-list/ToDoList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="203">
+              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -149,10 +134,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.css">
+        <entry file="file://$PROJECT_DIR$/src/actions/actionCreator.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="368">
+              <caret line="40" column="3" lean-forward="true" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#132#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,8 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reducers/tasks.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+            <state relative-caret-position="479">
+              <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
               <folding>
                 <element signature="e#0#66#0" expanded="true" />
               </folding>
@@ -170,12 +158,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/actionCreator.ts">
+        <entry file="file://$PROJECT_DIR$/src/reducers/tasksub.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            <state relative-caret-position="368">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding>
-                <element signature="e#0#132#0" expanded="true" />
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -206,9 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/layout/header/Header.css" />
-        <option value="$PROJECT_DIR$/src/layout/header/Header.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/todo-input/button/Button.js" />
@@ -239,24 +224,27 @@
         <option value="$PROJECT_DIR$/src/components/todo-item/ToDoSub.css" />
         <option value="$PROJECT_DIR$/src/components/todo-item/ToDoItem.js" />
         <option value="$PROJECT_DIR$/src/components/todo-item/timer-components/TimerDisplay.js" />
-        <option value="$PROJECT_DIR$/src/components/todo-list/ToDoList.js" />
         <option value="$PROJECT_DIR$/src/components/todo-item/ToDoItemDate.js" />
         <option value="$PROJECT_DIR$/src/components/todo-item/ToDoSub.js" />
         <option value="$PROJECT_DIR$/src/components/todo-input/input/Input.js" />
         <option value="$PROJECT_DIR$/src/containers/Todo.css" />
         <option value="$PROJECT_DIR$/src/components/todo-input/input/Input.css" />
-        <option value="$PROJECT_DIR$/src/reducers/tasks.ts" />
-        <option value="$PROJECT_DIR$/src/constants.ts" />
-        <option value="$PROJECT_DIR$/src/components/todo-input/button/Button.css" />
-        <option value="$PROJECT_DIR$/src/actions/actionCreator.ts" />
         <option value="$PROJECT_DIR$/src/components/search/SearchBar.js" />
         <option value="$PROJECT_DIR$/src/components/search/SearchBar.css" />
-        <option value="$PROJECT_DIR$/src/components/todo-item/sub/ToDoListSub.js" />
         <option value="$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.js" />
         <option value="$PROJECT_DIR$/src/components/footer/Footer.css" />
-        <option value="$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.css" />
-        <option value="$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.js" />
         <option value="$PROJECT_DIR$/src/containers/Todo.js" />
+        <option value="$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.css" />
+        <option value="$PROJECT_DIR$/src/components/todo-input/button/Button.css" />
+        <option value="$PROJECT_DIR$/src/components/todo-list/ToDoList.js" />
+        <option value="$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.css" />
+        <option value="$PROJECT_DIR$/src/reducers/tasks.ts" />
+        <option value="$PROJECT_DIR$/src/reducers/index.ts" />
+        <option value="$PROJECT_DIR$/src/constants.ts" />
+        <option value="$PROJECT_DIR$/src/reducers/tasksub.ts" />
+        <option value="$PROJECT_DIR$/src/actions/actionCreator.ts" />
+        <option value="$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.js" />
+        <option value="$PROJECT_DIR$/src/components/todo-item/sub/ToDoListSub.js" />
       </list>
     </option>
   </component>
@@ -420,15 +408,16 @@
       <updated>1559829503992</updated>
       <workItem from="1559829506331" duration="63667000" />
       <workItem from="1560849730284" duration="824000" />
-      <workItem from="1560873200591" duration="62043000" />
+      <workItem from="1560873200591" duration="68436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126534000" />
+    <option name="totallyTimeSpent" value="132927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
@@ -463,8 +452,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/layout/header/Header.css" />
-    <entry file="file://$PROJECT_DIR$/src/layout/header/Header.js" />
     <entry file="file://$PROJECT_DIR$/src/layout/main/Main.css" />
     <entry file="file://$PROJECT_DIR$/src/home_page/Home.js" />
     <entry file="file://$PROJECT_DIR$/src/App_ToDo.js" />
@@ -522,13 +509,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/todo-item/timer/ToDoItemDate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -609,44 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#184#221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/todo-item/timer/timer-components/TimerDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -657,27 +599,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/filters.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="43" selection-start-column="43" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/todo-item/timer/ToDoItemDate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,16 +618,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/todo-item/sub/ToDoListSub.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/todo-list/ToDoList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/todo-input/input/Input.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -725,36 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/todo-input/button/Button.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/tasks.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/actionCreator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#132#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -782,6 +667,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/todo-input/button/Button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/todo-input/button/Button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/todo-item/timer/ToDoItemDate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/todo-item/timer/ToDoItemDate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -794,42 +717,127 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/todo-input/input/ToDoInput.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="295">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/todo-item/sub/ToDoListSub.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/redux-localstorage-simple/dist/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="203">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/todo-input/button/Button.js">
+    <entry file="file://$PROJECT_DIR$/src/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        <state relative-caret-position="414">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#184#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/filters.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="57" lean-forward="true" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/tasks.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/tasksub.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/actionCreator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="40" column="3" lean-forward="true" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Todo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="-69">
+          <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/todo-item/sub/ToDoSub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="68" column="71" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/todo-list/ToDoList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/todo-item/sub/ToDoListSub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
         </state>
       </provider>
     </entry>

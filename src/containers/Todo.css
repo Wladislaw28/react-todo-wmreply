@@ -1,5 +1,5 @@
 .todo-wrapper {
-	max-width: 600px;
+	max-width: 1000px;
 	margin: 0 auto;
 	position: relative;
 	/*background-color: #fff;*/
@@ -9,5 +9,12 @@
 
 .todo-form{
 	margin-bottom: 50px;
+}
+
+.h2_checkbox{
+	color: white;
+	font-family: 'Franklin Gothic Medium', sans-serif;
+	font-size: 24px;
+	margin: 0 auto;
 }
 

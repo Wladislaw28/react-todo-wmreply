@@ -5,15 +5,18 @@ import ToDoInput from '../components/todo-input/input/ToDoInput';
 import Button from '../components/todo-input/button/Button';
 import Footer from '../components/footer/Footer';
 import ToDoList from '../components/todo-list/ToDoList';
-
-import {addTask, deleteTask, completeTask, changeFilter} from "../actions/actionCreator";
+import Searchbar from '../components/search/SearchBar';
+import Input from '../components/todo-input/input/Input';
+import {addTask, addTaskData, addTaskSub, deleteTask, searchTask, completeTask, changeFilter} from "../actions/actionCreator";
 import './Todo.css';
 
 class ToDo extends Component {
 
 	state = {
 		taskText: '',
-		taskData: ''
+		taskData: '',
+		searchText: '',
+		isExpansion: false
 	};
 
 	handleInputChange = ({ target: { value } }) => {
@@ -28,14 +31,35 @@ class ToDo extends Component {
 		})
 	};
 
+	handleCheckBoxChange = () => {
+		this.setState({
+			isExpansion: !this.state.isExpansion,
+		});
+	};
+
 	addTask = (e) => {
 		e.preventDefault();
-		const { taskText, taskData } = this.state;
+		const { taskText } = this.state;
 
 		if (taskText.length > 3) {
 			const { addTask } = this.props;
 
-			addTask((new Date()).getTime(), taskText, taskData, false);
+			addTask((new Date()).getTime(), taskText, false);
+
+			this.setState({
+				taskText: ''
+			})
+		}
+	};
+
+	addTaskData = (e) => {
+		e.preventDefault();
+		const { taskText, taskData } = this.state;
+
+		if (taskText.length > 3) {
+			const { addTaskData } = this.props;
+
+			addTaskData((new Date()).getTime(), taskText, taskData, false);
 
 			this.setState({
 				taskText: '',
@@ -43,6 +67,22 @@ class ToDo extends Component {
 			})
 		}
 	};
+
+	addTaskSub = (e) => {
+		e.preventDefault();
+		const { taskText, isExpansion } = this.state;
+
+		if (taskText.length > 3) {
+			const { addTask } = this.props;
+
+			addTask((new Date()).getTime(), taskText, false, false );
+
+			this.setState({
+				taskText: '',
+				isExpansion: false
+			})
+		}
+	}
 
 	getActiveTasksCounter = tasks => tasks.filter(task => !task.isCompleted).length;
 
@@ -57,23 +97,36 @@ class ToDo extends Component {
 		}
 	};
 
+	updateData(config) {
+		this.setState(config);
+	};
+
+
 	render() {
-		const { taskText, taskData } = this.state;
-		const { tasks, deleteTask, completeTask, filters, changeFilter } = this.props;
+		const { taskText, taskData, searchText, isExpansion } = this.state;
+		const { tasks, deleteTask, completeTask, filters, changeFilter, searchTask } = this.props;
 		const isTasksExist = tasks && tasks.length > 0;
 		const filteredTasks = this.filterTasks(tasks, filters);
 		const taskCounter = this.getActiveTasksCounter(tasks);
 
 		return (
 			<div className="todo-wrapper">
+				<Searchbar update={this.updateData.bind(this)} searchTask={searchTask} type="text" searchText={searchText}   />
 				<div className="todo-form">
-					<ToDoInput onChange={this.handleInputChange} value={taskText} type="text" />
-					<ToDoInput onChange={this.handleInputDataChange} value={taskData} type="date" />
-					<Button onClick={this.addTask}>Add task</Button>
+
+					<ToDoInput onChange={this.handleInputChange} value={taskText} type="text"
+							   className='input__field input__field--isao' />
+					<ToDoInput onChange={this.handleInputDataChange} value={taskData} type="date"
+							   className='input__field input__field--isao' />
+					<h2 className="h2_checkbox">Expand the task for subtasks?</h2>
+					<Input id="checkbox" type="checkbox" checked={isExpansion} onChange={this.handleCheckBoxChange} />
+					<Button onClick={this.addTask}>Add Simple task</Button>
+					<Button onClick={this.addTaskData}>Add task with data</Button>
+					<Button onClick={this.addTaskSub}>Add Expansion Task</Button>
 					<Button>Clear Complete Task</Button>
 
-					{console.log(tasks.length)}
 				</div>
+
 				{isTasksExist && <Footer changeFilter={changeFilter} amount={taskCounter} activeFilter={filters} />}
 				{isTasksExist && <ToDoList completeTask={completeTask} tasksList={filteredTasks} deleteTask={deleteTask} />}
 			</div>
@@ -84,4 +137,5 @@ class ToDo extends Component {
 export default connect(({tasks, filters}) => ({
 	tasks,
 	filters,
-}), { addTask, deleteTask, completeTask, changeFilter})(ToDo);
+}), { addTask, addTaskData, addTaskSub, searchTask,
+	deleteTask, completeTask, changeFilter})(ToDo);

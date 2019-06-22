@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import ToDoItem from "./ToDoItem";
+import ToDoItem from "../ToDoItem";
 import Button_Date from './timer-components/Button_Date';
 import TimerDisplay from './timer-components/TimerDisplay';
 
 import './ToDoItemDate.css';
 
-class ToDoItemDate extends ToDoItem{
+class ToDoItemDate extends React.Component{
 
 	constructor(props) {
 		super(props);
@@ -43,7 +43,6 @@ class ToDoItemDate extends ToDoItem{
 					<span className={isCompleted ? 'completed text' : 'text'}>{text}</span>
 					<Button_Date time={data_sec} startTimer={this.startTimer} />
 					<TimerDisplay timeLeft = {this.state.timeLeft}/>
-					<i onClick={ () => deleteTask(id) } className="fas fa-plus" />
 					<i onClick={ () => deleteTask(id) } className="fas fa-times" />
 				</li>
 			</div>

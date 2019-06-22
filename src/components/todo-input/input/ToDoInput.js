@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import './ToDoInput.css';
 
-const ToDoInput = ({ value, onChange, onKeyPress, type }) => (
+const ToDoInput = ({ value, onChange, onKeyPress, className, type }) => (
 	<div className="todo-input-wrapper">
 		<span className="input input--isao">
 			<input
 				type={type}
-				className="input__field input__field--isao"
+				className={className}
 				onChange={onChange}
 				value={value}
 				onKeyPress={onKeyPress}

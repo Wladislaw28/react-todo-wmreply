@@ -1,7 +1,7 @@
-.todo-item {
+.todo-item-sub {
 	font-size: 24px;
 	border: 2px solid #c5564a;
-	min-height: 260px;
+	min-height: 460px;
 	display: flex;
 	align-items: center;
 	list-style: none;

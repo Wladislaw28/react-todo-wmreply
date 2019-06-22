@@ -3,7 +3,7 @@ import './TimerDisplay.css';
 
 class TimerDisplay extends React.Component {
 	render() {
-			return <h1 className="display">Осталась {this.props.timeLeft} <br/> секунды</h1>
+			return <h1 className="display">Осталось {this.props.timeLeft} <br/> секунды</h1>
 	}
 }
 
